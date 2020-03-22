@@ -165,8 +165,7 @@ npm_rebuild() {
 
   if [ -e "$build_dir/package.json" ]; then
     cd "$build_dir" || return
-    echo "Rebuilding any native modules"
-    npm rebuild 2>&1
+    echo "Removed rebuild step"
     if [ -e "$build_dir/npm-shrinkwrap.json" ]; then
       echo "Installing any new modules (package.json + shrinkwrap)"
     else
